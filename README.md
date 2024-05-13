@@ -22,3 +22,4 @@ clientはsysctlsで以下のように設定しています。
 - tcp_tw_reuse=1でクライアントからの接続を使い回すように
 - tcp_fin_timeout=5でFIN-WAIT-2からCLOSINGへの待機をデフォルトの60sから5sに
 - ip_local_port_rangeを極端に狭めることで枯渇した状態を発生しやすく
+  - 枯渇した時に `dial tcp 172.23.0.2:8080: connect: cannot assign requested address` みたいな感じになる 
