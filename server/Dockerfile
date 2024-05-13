@@ -8,7 +8,7 @@ RUN apk update && apk add git
 RUN go install github.com/cosmtrek/air@v1.45.0 && \
   chmod +x ${GOPATH}/bin/air
 
-COPY go.mod .air.toml ./
+COPY go.mod go.sum .air.toml ./
 
 ENV TZ="Asia/Tokyo"
 
